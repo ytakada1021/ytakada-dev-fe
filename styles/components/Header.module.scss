@@ -1,0 +1,15 @@
+.header {
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .icon {
+    height: 56px;
+  }
+
+  .breadcrumbs {
+    font-size: 1.25rem;
+    margin-left: 24px;
+  }
+}
