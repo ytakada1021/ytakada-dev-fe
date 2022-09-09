@@ -1,0 +1,15 @@
+.container {
+  width: inherit;
+  height: 136px;
+  background-color: var(--color-subbackground);
+  border-radius: 20px;
+  padding: 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .title {
+    font-size: 1.25rem;
+  }
+}
+

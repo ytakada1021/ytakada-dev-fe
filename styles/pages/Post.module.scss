@@ -1,0 +1,21 @@
+.post {
+  .title {
+    padding: 2rem 0 0;
+  }
+
+  .dates {
+    margin: 1rem 0;
+    display: flex;
+    .posted_at {
+      display: flex;
+    }
+    .updated_at {
+      display: flex;
+      margin-left: 1rem;
+    }
+  }
+
+  .content {
+    margin: 2rem 0;
+  }
+}

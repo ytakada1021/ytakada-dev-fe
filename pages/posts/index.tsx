@@ -1,13 +1,9 @@
 import { NextPage } from "next";
-import PostList from "../components/postList";
-import styles from "../styles/pages/Top.module.scss";
+import PostList from "../../components/postList";
 
-const Top: NextPage<any> = ({ posts }: { posts: any }) => {
+const PostListPage: NextPage<any> = ({ posts }: { posts: any }) => {
   return (
     <main>
-      <div className={styles.about}>
-        <a href="/about">About ytakada</a>
-      </div>
       <ul>
         {posts.map((post: any) => (
           <li key={post.id}>
@@ -15,9 +11,6 @@ const Top: NextPage<any> = ({ posts }: { posts: any }) => {
           </li>
         ))}
       </ul>
-      <div className={styles.all_posts}>
-        <a href="/posts">すべての記事 →</a>
-      </div>
     </main>
   );
 }
@@ -29,4 +22,4 @@ export async function getStaticProps() {
   return { props: { posts } };
 }
 
-export default Top;
+export default PostListPage;
