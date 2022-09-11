@@ -1,15 +1,17 @@
-.container {
-  width: inherit;
-  height: 136px;
-  background-color: var(--color-subbackground);
-  border-radius: 20px;
-  padding: 24px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.post_list {
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: 15px;
+  padding: 24px 32px;
+  border-style: solid;
+  border-color: var(--color-darkgray);
 
   .title {
     font-size: 1.25rem;
+  }
+
+  .meta {
+    padding: 12px 0 0;
   }
 }
 

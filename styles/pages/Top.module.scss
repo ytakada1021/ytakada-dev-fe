@@ -1,4 +1,12 @@
-.all_posts {
-  padding: 64px 0 0;
-  text-align: center;
+.main {
+  padding: 16px 200px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-height: calc(100vh - 104px - 124px); // 画面の高さからヘッダ, フッタの高さを引く
+
+  .all_posts {
+    margin-top: auto;
+    text-align: center;
+  }
 }

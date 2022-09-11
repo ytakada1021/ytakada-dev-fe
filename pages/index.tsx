@@ -1,22 +1,27 @@
 import { NextPage } from "next";
+import Link from "next/link";
 import PostList from "../components/postList";
 import styles from "../styles/pages/Top.module.scss";
 
 const Top: NextPage<any> = ({ posts }: { posts: any }) => {
   return (
-    <main>
+    <main className={styles.main}>
       <div className={styles.about}>
-        <a href="/about">About ytakada</a>
+        <a href="/about">About ytakada →</a>
       </div>
-      <ul>
-        {posts.map((post: any) => (
-          <li key={post.id}>
-            <PostList post={post} />
-          </li>
-        ))}
-      </ul>
+      <div className={styles.posts}>
+        <ul>
+          {posts.map((post: any) => (
+            <li key={post.id}>
+              <PostList post={post} />
+            </li>
+          ))}
+        </ul>
+      </div>
       <div className={styles.all_posts}>
-        <a href="/posts">すべての記事 →</a>
+        <Link href="/posts">
+          <a>All posts →</a>
+        </Link>
       </div>
     </main>
   );
