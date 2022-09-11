@@ -1,11 +1,16 @@
 .header {
   height: 104px;
+  padding: 0 200px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  border-style: none none solid none;
+  border-color: #888888;
+  background-color: #FFFFFF;
 
   .icon {
-    height: 56px;
+    width: 48px;
+    height: 48px;
   }
 
   .breadcrumbs {

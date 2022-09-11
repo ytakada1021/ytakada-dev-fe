@@ -1,17 +1,19 @@
+import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/components/Header.module.scss";
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.icon}>
-        <a href="/">
-          <svg width="100%" height="100%" viewBox="0, 0, 200, 200" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="100" r="100" fill="#0335D1" />
-          </svg>
-        </a>
+        <Link href="/">
+          <a>
+            <Image src="/logo.svg" alt="logo" width="100%" height="100%" />
+          </a>
+        </Link>
       </div>
       <div className={styles.breadcrumbs}>
-        ytakada
+        <p>ytakada.dev</p>
       </div>
     </header>
   );

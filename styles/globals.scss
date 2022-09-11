@@ -26,10 +26,14 @@ a {
 } */
 
 :root {
-  --color-background: #ffffff;
+  --color-background: #EEEEEE;
   --color-subbackground: #EEEEEE;
   --color-text: #000000;
   --color-link: #66C4ED;
+
+  --color-white: #FFFFFF;
+  --color-gray: #EEEEEE;
+  --color-darkgray: #888888;
 }
 
 html {
@@ -37,7 +41,7 @@ html {
 }
 
 body {
-  background-color: var(--color-background);
+  background-color: var(--color-gray);
   color: var(--color-text)
 }
 
