@@ -1,12 +1,12 @@
 .post_list {
   width: 100%;
   background-color: var(--color-white);
-  border-radius: 15px;
-  padding: 24px 32px;
-  border: 1px solid var(--color-darkgray);
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-darkgray);
 
   .title {
     margin-bottom: 16px;
+    font-size: 1.25rem;
   }
 
   .meta {

@@ -4,8 +4,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-style: solid none none none;
-  border-color: var(--color-darkgray);
+  border-top: 1px solid var(--color-darkgray);
   background-color: var(--color-white);
 
   .links {
