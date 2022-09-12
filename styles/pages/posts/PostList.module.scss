@@ -1,13 +1,8 @@
 .main {
-  padding: 16px 200px 32px;
+  padding: 48px 200px 48px;
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - var(--header-height) - var(--footer-height)); // 画面の高さからヘッダ, フッタの高さを引く
-
-  .about {
-    font-weight: bold;
-    margin-bottom: 48px;
-  }
 
   .posts {
     margin-bottom: 48px;
@@ -18,11 +13,5 @@
       padding: 0;
       list-style: none;
     }
-  }
-
-  .all_posts {
-    margin: auto 0 16px;
-    text-align: center;
-    font-weight: bold;
   }
 }

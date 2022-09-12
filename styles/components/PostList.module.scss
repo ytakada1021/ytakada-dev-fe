@@ -3,15 +3,50 @@
   background-color: var(--color-white);
   border-radius: 15px;
   padding: 24px 32px;
-  border-style: solid;
-  border-color: var(--color-darkgray);
+  border: 1px solid var(--color-darkgray);
 
   .title {
-    font-size: 1.25rem;
+    margin-bottom: 16px;
   }
 
   .meta {
-    padding: 12px 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+
+    .post_date {
+      display: flex;
+      justify-content: flex-start;
+      gap: 8px;
+      align-items: center;
+
+      .icon_post {
+        width: 18px;
+        height: 18px;
+        position: relative;
+      }
+
+      .label {
+        vertical-align: middle;
+      }
+    }
+
+    .update_date {
+      display: flex;
+      justify-content: flex-start;
+      gap: 8px;
+      align-items: center;
+
+      .icon_update {
+        width: 20px;
+        height: 20px;
+        position: relative;
+      }
+
+      .label {
+        vertical-align: middle;
+      }
+    }
   }
 }
-

@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import styles from "../../styles/pages/posts/Post.module.scss";
 import Head from "next/head";
 import Image from "next/image";
+import Script from "next/script";
 
 const PostPage: NextPage<any> = ({ post }: { post: any }) => {
   return (
@@ -34,8 +35,8 @@ const PostPage: NextPage<any> = ({ post }: { post: any }) => {
         </article>
       </main>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+      <Script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" />
+      <Script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" />
     </>
   );
 }

@@ -1,14 +1,15 @@
 import { NextPage } from "next";
 import Link from "next/link";
 import PostList from "../components/postList";
+import Post from "../models/post";
 import styles from "../styles/pages/Top.module.scss";
 
-const Top: NextPage<any> = ({ posts }: { posts: any }) => {
+const Top: NextPage<any> = ({ serializedPosts }: { serializedPosts: string }) => {
+  const posts = JSON.parse(serializedPosts);
+
   return (
     <main className={styles.main}>
-      <div className={styles.about}>
-        <a href="/about">About ytakada →</a>
-      </div>
+      <a className={styles.about} href="/about">About author →</a>
       <div className={styles.posts}>
         <ul>
           {posts.map((post: any) => (
@@ -29,9 +30,19 @@ const Top: NextPage<any> = ({ posts }: { posts: any }) => {
 
 export async function getStaticProps() {
   const res = await fetch('http://localhost/posts');
-  const posts = await res.json();
+  const json = await res.json();
 
-  return { props: { posts } };
+  const posts = json.map((obj: any) => new Post(
+    obj.id,
+    obj.title,
+    obj.content,
+    obj.posted_at,
+    obj.updated_at
+  ));
+
+  const serializedPosts = JSON.stringify(posts);
+
+  return { props: { serializedPosts } };
 }
 
 export default Top;
