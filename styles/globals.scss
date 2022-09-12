@@ -26,13 +26,13 @@ a {
 } */
 
 :root {
-  --color-background: #EEEEEE;
-  --color-subbackground: #EEEEEE;
-  --color-text: #000000;
-  --color-link: #66C4ED;
   --color-white: #FFFFFF;
   --color-gray: #EEEEEE;
   --color-darkgray: #888888;
+  --color-black: #000000;
+  --color-blue: #466dec;
+  --header-height: 80px;
+  --footer-height: 120px;
 }
 
 html {
@@ -41,16 +41,11 @@ html {
 
 body {
   background-color: var(--color-gray);
-  color: var(--color-text)
+  color: var(--color-black)
 }
 
 * {
   box-sizing: border-box;
-}
-
-ol, ul {
-  list-style: none;
-  padding-left: 0;
 }
 
 table {
@@ -60,10 +55,11 @@ table {
   -webkit-overflow-scrolling: touch;
 }
 
-h1 {
-  font-size: 1.5rem;
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: normal;
 }
 
-h2 {
-  font-size: 1.25rem;
+a {
+  color: inherit;
+  text-decoration: none; /* 下線を無効化 */
 }
