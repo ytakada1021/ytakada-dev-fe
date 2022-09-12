@@ -9,13 +9,19 @@ const PostListPage: NextPage<any> = ({ serializedPosts }: { serializedPosts: str
   return (
     <main className={styles.main}>
       <div className={styles.posts}>
-        <ul>
-          {posts.map((post: any) => (
-            <li key={post.id}>
-              <PostList post={post} />
-            </li>
-          ))}
-        </ul>
+        {
+          posts.length === 0
+            ?
+            <p className={styles.not_posted}>まだ記事は投稿されていません.</p>
+            :
+            <ul>
+              {posts.map((post: any) => (
+                <li key={post.id}>
+                  <PostList post={post} />
+                </li>
+              ))}
+            </ul>
+        }
       </div>
     </main>
   );

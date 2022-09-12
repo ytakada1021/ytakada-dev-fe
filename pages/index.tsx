@@ -11,13 +11,19 @@ const Top: NextPage<any> = ({ serializedPosts }: { serializedPosts: string }) =>
     <main className={styles.main}>
       <a className={styles.about} href="/about">About author →</a>
       <div className={styles.posts}>
-        <ul>
-          {posts.map((post: any) => (
-            <li key={post.id}>
-              <PostList post={post} />
-            </li>
-          ))}
-        </ul>
+        {
+          posts.length === 0
+            ?
+            <p className={styles.not_posted}>まだ記事は投稿されていません.</p>
+            :
+            <ul>
+              {posts.map((post: any) => (
+                <li key={post.id}>
+                  <PostList post={post} />
+                </li>
+              ))}
+            </ul>
+        }
       </div>
       <div className={styles.all_posts}>
         <Link href="/posts">
