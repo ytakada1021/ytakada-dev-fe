@@ -1,3 +1,9 @@
 <svg viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="105" cy="105" r="100" fill="#6C9BD2" stroke="#1E7AE6" stroke-width="2.5%" />
+  <defs>
+    <linearGradient id="e" x1="0" y1="0" x2="210" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5D4CD8" offset="0" />
+      <stop stop-color="#76ECEE" offset="1" />
+    </linearGradient>
+  </defs>
+  <circle cx="105" cy="105" r="95" fill="#6C9BD2" stroke="url(#e)" stroke-width="5%" />
 </svg>
