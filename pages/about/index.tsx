@@ -10,12 +10,13 @@ const About: NextPage = () => {
         <title>About | ytakada.dev</title>
       </Head>
       <main className={styles.main}>
-        <p>ytakadaは、東京都を中心に活動するフリーランスエンジニアです。バックエンド領域が得意。</p>
+        <h1>About</h1>
+        <p>ytakadaは、東京都を中心に活動するフリーランスエンジニアです。</p><p>現在は、ドメイン駆動設計などのソフトウェア設計に特に興味があります。バックエンド領域が得意です。</p>
 
         <div className={styles.technology_stack}>
-          <h1>技術スタック</h1>
+          <h2>技術スタック</h2>
           <div className={styles.main_stack}>
-            <h2>メイン</h2>
+            <h3>メイン</h3>
             <table border={1}>
               <thead>
                 <tr>
@@ -58,12 +59,17 @@ const About: NextPage = () => {
               </tbody>
             </table>
           </div>
-          <h2>挑戦中</h2>
-          <p>Go, Rust, TypeScript, React.js, Next.js</p>
+          <h3>挑戦中</h3>
+          <ul>
+            <li>要求開発, 要件定義</li>
+            <li>各種設計（システムアーキテクチャ, ソフトウェア, データ, インフラ）</li>
+            <li>言語, ライブラリ, フレームワーク（Go, Rust, TypeScript, React.js, Next.js）</li>
+            <li>DevOps関連技術</li>
+          </ul>
         </div>
 
         <div className={styles.links}>
-          <h1>関連リンク</h1>
+          <h2>関連リンク</h2>
           <div className={styles.items}>
             <ul>
               <li>
@@ -81,7 +87,7 @@ const About: NextPage = () => {
         </div>
 
         <div className={styles.contact}>
-          <h1>お問い合わせ</h1>
+          <h2>お問い合わせ</h2>
           <p>mail__at__ytakada.dev までメールにてご連絡ください（__at__は＠に置き換えください）。</p>
         </div>
       </main>
