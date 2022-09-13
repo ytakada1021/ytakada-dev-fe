@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Head from "next/head";
 import PostList from "../../components/postList";
 import Post from "../../models/post";
 import styles from "../../styles/pages/posts/PostList.module.scss";
@@ -7,23 +8,28 @@ const PostListPage: NextPage<any> = ({ serializedPosts }: { serializedPosts: str
   const posts = JSON.parse(serializedPosts);
 
   return (
-    <main className={styles.main}>
-      <div className={styles.posts}>
-        {
-          posts.length === 0
-            ?
-            <p className={styles.not_posted}>まだ記事は投稿されていません.</p>
-            :
-            <ul>
-              {posts.map((post: any) => (
-                <li key={post.id}>
-                  <PostList post={post} />
-                </li>
-              ))}
-            </ul>
-        }
-      </div>
-    </main>
+    <>
+      <Head>
+        <title>Posts | ytakada.dev</title>
+      </Head>
+      <main className={styles.main}>
+        <div className={styles.posts}>
+          {
+            posts.length === 0
+              ?
+              <p className={styles.not_posted}>まだ記事は投稿されていません.</p>
+              :
+              <ul>
+                {posts.map((post: any) => (
+                  <li key={post.id}>
+                    <PostList post={post} />
+                  </li>
+                ))}
+              </ul>
+          }
+        </div>
+      </main>
+    </>
   );
 }
 

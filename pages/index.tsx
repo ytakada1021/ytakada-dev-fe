@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import PostList from "../components/postList";
 import Post from "../models/post";
@@ -8,31 +9,36 @@ const Top: NextPage<any> = ({ serializedPosts }: { serializedPosts: string }) =>
   const posts = JSON.parse(serializedPosts);
 
   return (
-    <main className={styles.main}>
-      <Link href="/about">
-        <a className={styles.about} >About author →</a>
-      </Link>
-      <div className={styles.posts}>
-        {
-          posts.length === 0
-            ?
-            <p className={styles.not_posted}>まだ記事は投稿されていません.</p>
-            :
-            <ul>
-              {posts.map((post: any) => (
-                <li key={post.id}>
-                  <PostList post={post} />
-                </li>
-              ))}
-            </ul>
-        }
-      </div>
-      <div className={styles.all_posts}>
-        <Link href="/posts">
-          <a>All posts →</a>
+    <>
+      <Head>
+        <title>ytakada.dev</title>
+      </Head>
+      <main className={styles.main}>
+        <Link href="/about">
+          <a className={styles.about} >About author →</a>
         </Link>
-      </div>
-    </main>
+        <div className={styles.posts}>
+          {
+            posts.length === 0
+              ?
+              <p className={styles.not_posted}>まだ記事は投稿されていません.</p>
+              :
+              <ul>
+                {posts.map((post: any) => (
+                  <li key={post.id}>
+                    <PostList post={post} />
+                  </li>
+                ))}
+              </ul>
+          }
+        </div>
+        <div className={styles.all_posts}>
+          <Link href="/posts">
+            <a>All posts →</a>
+          </Link>
+        </div>
+      </main>
+    </>
   );
 }
 

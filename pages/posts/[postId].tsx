@@ -11,7 +11,7 @@ const PostPage: NextPage<any> = ({ serializedPost }: { serializedPost: string })
   return (
     <>
       <Head>
-        <title>{post.title}</title>
+        <title>{post.title} | ytakada.dev</title>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
       </Head>
 
