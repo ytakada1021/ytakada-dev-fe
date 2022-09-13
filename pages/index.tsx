@@ -35,7 +35,9 @@ const Top: NextPage<any> = ({ serializedPosts }: { serializedPosts: string }) =>
 }
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost/posts');
+  const apiEndpoint = process.env.NEXT_PUBLIC_API_BASE_URI + "/posts";
+
+  const res = await fetch(apiEndpoint);
   const json = await res.json();
 
   const posts = json.map((obj: any) => new Post(

@@ -42,7 +42,9 @@ const PostPage: NextPage<any> = ({ post }: { post: any }) => {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch("http://localhost/posts");
+  const apiEndpoint = process.env.NEXT_PUBLIC_API_BASE_URI + "/posts";
+
+  const res = await fetch(apiEndpoint);
   const posts = await res.json();
 
   const paths = posts.map((post: any) => ({
@@ -55,7 +57,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: any }) {
-  const res = await fetch(`http://localhost/posts/${params.postId}`);
+  const apiEndpoint = `${process.env.NEXT_PUBLIC_API_BASE_URI}/posts/${params.postId}`;
+
+  const res = await fetch(apiEndpoint);
   const post = await res.json();
 
   post.posted_at = (new Date(post.posted_at)).toLocaleDateString();
