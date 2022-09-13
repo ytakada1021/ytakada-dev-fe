@@ -16,12 +16,18 @@ export default function PostList({ post }: { post: any }) {
               </div>
               <p className={styles.label}>{post.posted_at}</p>
             </div>
-            <div className={styles.update_date}>
-              <div className={styles.icon_update}>
-                <Image src="/update_FILL0_wght400_GRAD0_opsz48.svg" layout="fill" alt="icon_update" />
-              </div>
-              <p className={styles.label}>{post.updated_at}</p>
-            </div>
+            {
+              post.updated_at == null
+                ?
+                null
+                :
+                <div className={styles.update_date}>
+                  <div className={styles.icon_update}>
+                    <Image src="/update_FILL0_wght400_GRAD0_opsz48.svg" layout="fill" alt="icon_update" />
+                  </div>
+                  <p className={styles.label}>{post.updated_at}</p>
+                </div>
+            }
           </div>
         </div>
       </a>

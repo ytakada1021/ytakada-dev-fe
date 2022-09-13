@@ -3,11 +3,12 @@ import styles from "../../styles/pages/about/About.module.scss";
 
 const About: NextPage = () => {
   return (
-    <main className={styles.about}>
+    <main className={styles.main}>
+      <p>ytakadaは、東京都を中心に活動するフリーランスエンジニアです。バックエンド領域が得意。</p>
 
-      <div className={styles.technology}>
+      <div className={styles.technology_stack}>
         <h1>技術スタック</h1>
-        <div className={styles.main}>
+        <div className={styles.main_stack}>
           <h2>メイン</h2>
           <table border={1}>
             <thead>

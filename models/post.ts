@@ -6,7 +6,7 @@ class Post {
     public readonly _title: string,
     public readonly _content: string,
     private readonly _postedAt: string,
-    private readonly _updatedAt: string | undefined
+    private readonly _updatedAt: string | undefined | null
   ) {}
 
   get postedAt(): Datetime {
@@ -14,7 +14,7 @@ class Post {
   }
 
   get updatedAt(): Datetime | undefined {
-    if (this._updatedAt === undefined) {
+    if (this._updatedAt == null) {
       return undefined;
     } else {
       return new Datetime(this._updatedAt);
