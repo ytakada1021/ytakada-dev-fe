@@ -1,4 +1,5 @@
-import styles from '../styles/components/Footer.module.scss';
+import Link from "next/link";
+import styles from "../styles/components/Footer.module.scss";
 
 export default function Footer() {
   return (
@@ -10,7 +11,10 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <p>©︎ 2022 ytakada.dev</p>
+      <Link href="/privacy">
+        <a className={styles.privacy}>プライバシーポリシー</a>
+      </Link>
+      <p className={styles.copyright}>©︎ 2022 ytakada.dev</p>
     </footer>
   );
 }

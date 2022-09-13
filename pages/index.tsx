@@ -9,7 +9,9 @@ const Top: NextPage<any> = ({ serializedPosts }: { serializedPosts: string }) =>
 
   return (
     <main className={styles.main}>
-      <a className={styles.about} href="/about">About author →</a>
+      <Link href="/about">
+        <a className={styles.about} >About author →</a>
+      </Link>
       <div className={styles.posts}>
         {
           posts.length === 0
