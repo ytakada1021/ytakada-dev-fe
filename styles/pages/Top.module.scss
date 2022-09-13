@@ -1,8 +1,10 @@
 .main {
-  padding: 16px 200px 32px;
+  margin: 0 auto;
+  max-width: var(--content-max-width);
+  padding: 16px 20px 64px;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height)); // 画面の高さからヘッダ, フッタの高さを引く
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - var(--header-height) - var(--footer-height)); // 画面の高さからヘッダ, フッタの高さを引く
 
   .about {
     font-weight: bold;
@@ -25,7 +27,7 @@
   }
 
   .all_posts {
-    margin: auto 0 16px;
+    margin-top: auto;
     text-align: center;
     font-weight: bold;
   }

@@ -33,6 +33,7 @@ a {
   --color-blue: #466dec;
   --header-height: 80px;
   --footer-height: 120px;
+  --content-max-width: 1040px;
 }
 
 html {
@@ -62,4 +63,8 @@ h1, h2, h3, h4, h5, h6, p {
 a {
   color: inherit;
   text-decoration: none; /* 下線を無効化 */
+}
+
+pre {
+  overflow-x: scroll;
 }

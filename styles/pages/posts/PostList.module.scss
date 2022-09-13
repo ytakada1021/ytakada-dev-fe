@@ -1,12 +1,12 @@
 .main {
-  padding: 16px 200px 48px;
+  max-width: var(--content-max-width);
+  padding: 0 20px 0;
+  margin: 16px auto 48px;
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - var(--header-height) - var(--footer-height)); // 画面の高さからヘッダ, フッタの高さを引く
 
   .posts {
-    margin-bottom: 48px;
-
     .not_posted {
       text-align: center;
     }

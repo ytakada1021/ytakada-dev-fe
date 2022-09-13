@@ -1,9 +1,9 @@
 .main {
-  padding: 0 200px;
+  max-width: var(--content-max-width);
+  margin: 24px auto 64px;
+  padding: 20px;
 
   .post {
-    margin: 48px 0;
-
     .title {
       font-size: 2rem;
       font-weight: normal;
