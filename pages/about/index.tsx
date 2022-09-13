@@ -70,20 +70,18 @@ const About: NextPage = () => {
 
         <div className={styles.links}>
           <h2>関連リンク</h2>
-          <div className={styles.items}>
-            <ul>
-              <li>
-                <a href="https://github.com/ytakada1021" target="__blank" rel="noreferrer noopener">
-                  <div className={styles.github}>
-                    <div className={styles.icon}>
-                      <Image src="/mark-github.svg" alt="github" layout="fill" />
-                    </div>
-                    <p className={styles.label}>GitHub</p>
+          <ul className={styles.items}>
+            <li>
+              <a href="https://github.com/ytakada1021" target="__blank" rel="noreferrer noopener">
+                <div className={styles.github}>
+                  <div className={styles.icon}>
+                    <Image src="/mark-github.svg" alt="github" layout="fill" />
                   </div>
-                </a>
-              </li>
-            </ul>
-          </div>
+                  GitHub
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
 
         <div className={styles.contact}>
