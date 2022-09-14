@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import styles from "../../styles/pages/posts/Post.module.scss";
 import Head from "next/head";
-import Image from "next/image";
 import Script from "next/script";
 import Post from "../../models/post";
 
@@ -22,7 +21,7 @@ const PostPage: NextPage<any> = ({ serializedPost }: { serializedPost: string })
           <div className={styles.meta}>
             <div className={styles.post_date}>
               <div className={styles.icon_post}>
-                <Image src="/edit_FILL0_wght400_GRAD0_opsz48.svg" layout="fill" alt="icon_post" />
+                <img src="/edit_FILL0_wght400_GRAD0_opsz48.svg" alt="icon_post" width="100%" height="100%" />
               </div>
               <p className={styles.label}>{post.posted_at}</p>
             </div>
@@ -33,7 +32,7 @@ const PostPage: NextPage<any> = ({ serializedPost }: { serializedPost: string })
                 :
                 <div className={styles.update_date}>
                   <div className={styles.icon_update}>
-                    <Image src="/update_FILL0_wght400_GRAD0_opsz48.svg" layout="fill" alt="icon_update" />
+                    <img src="/update_FILL0_wght400_GRAD0_opsz48.svg" alt="icon_update" width="100%" height="100%" />
                   </div>
                   <p className={styles.label}>{post.updated_at}</p>
                 </div>

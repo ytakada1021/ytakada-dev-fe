@@ -1,6 +1,5 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../../styles/pages/about/About.module.scss";
 
 const About: NextPage = () => {
@@ -75,7 +74,7 @@ const About: NextPage = () => {
               <a href="https://github.com/ytakada1021" target="__blank" rel="noreferrer noopener">
                 <div className={styles.github}>
                   <div className={styles.icon}>
-                    <Image src="/mark-github.svg" alt="github" layout="fill" />
+                    <img src="/mark-github.svg" alt="github" width="100%" height="100%" />
                   </div>
                   GitHub
                 </div>
