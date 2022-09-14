@@ -32,5 +32,4 @@ jobs:
           echo "Running AWS s3 sync"
           aws s3 sync . s3://${{ secrets.AWS_S3_BUCKET }} \
             --region ap-northeast-1 \
-            --delete \
-            --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+            --delete
